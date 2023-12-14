@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materias</title>
+  <link rel="stylesheet" href="../paquetes/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../paquetes/jquery-ui-1.13.2.custom/jquery-ui.min.css">
+  <script src="../paquetes/bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+  <script src="../paquetes/jQuery-3.7.0/jquery-3.7.0.min.js"></script>
+  <script src="../paquetes/jquery-ui-1.13.2.custom/jquery-ui.min.js"></script>
+  
+
+  <style>
+     body {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+    }
+    
+   .btn{
+    margin-top: 1%;
+   }
+  </style>
+  
+</head>
+<body>
+
+  <div class="container mt-5" id="materias" name="form1">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+             <p class="text-center text-uppercase fs-5 fw-bolder">Agregar Materia</p> 
+            </div>
+            <div class="card-body">
+                <form id="addMateria">
+                    <!-- <div class="form-group">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre de la materia">
+                    </div> -->
+                    <div class="form-group">
+                      <label for="nombre">Nombra materia</label>
+                      <select class="form-select" aria-label="Default select example" id="nombre" required>
+                        <option selected disabled value="0">Seleccione</option>
+                        <option value="ARTISTIC EXPRESSION">ARTISTIC EXPRESSION</option>
+                        <option value="ARTS">ARTS</option>
+                        <option value="CALLIGRAPHY">CALLIGRAPHY</option>
+                        <option value="CHEMISTRY">CHEMISTRY</option>
+                        <option value="DANCING">DANCING</option>
+                        <option value="DRAMA">DRAMA</option>
+                        <option value="ENGLISH">ENGLISH</option>
+                        <option value="ENGLISH USAGE">ENGLISH USAGE</option>
+                        <option value="ETHICS AND SOCIAL COEXISTENCE">ETHICS AND SOCIAL COEXISTENCE</option>
+                        <option value="FINE MOTOR">FINE MOTOR</option>
+                        <option value="FRENCH">FRENCH</option>
+                        <option value="HUMANITIES AND SPANISH LANGUAGE">HUMANITIES AND SPANISH LANGUAGE</option>
+                        <option value="INTERACTIVE ENGLISH">INTERACTIVE ENGLISH</option>
+                        <option value="LITERACY">LITERACY</option>
+                        <option value="MATH">MATH</option>
+                        <option value="MATHEMATICAL LOGIC CONNECTION">MATHEMATICAL LOGIC CONNECTION</option>
+                        <option value="MUSIC">MUSIC</option>
+                        <option value="MUSICAL DRAMA">MUSICAL DRAMA</option>
+                        <option value="PARENT'S COMMITMENT">PARENT'S COMMITMENT</option>
+                        <option value="PHILOSOPHY">PHILOSOPHY</option>
+                        <option value="PHYSICAL EDUCATION">PHYSICAL EDUCATION</option>
+                        <option value="PHYSICS">PHYSICS</option>
+                        <option value="POLITICAL SCIENCES">POLITICAL SCIENCES</option>
+                        <option value="RELIGION">RELIGION</option>
+                        <option value="SABER">SABER</option>
+                        <option value="SCHOOL BEHAVIOR">SCHOOL BEHAVIOR</option>
+                        <option value="SCIENCE">SCIENCE</option>
+                        <option value="SOCIAL AND CULTURAL ENVIRONMENT">SOCIAL AND CULTURAL ENVIRONMENT</option>
+                        <option value="SOCIAL STUDIES">SOCIAL STUDIES</option>
+                        <option value="SPANISH">SPANISH</option>
+                        <option value="SYSTEMS AND DESIGN">SYSTEMS AND DESIGN</options>  
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="responsable">Profesor</label>
+                      <input type="text" class="form-control" id="responsable" disabled placeholder="Ingrese el usuario responsable">
+                    </div>
+                    <div class="form-group">
+                      <label for="nivel">Grado</label>
+                      <input type="text" class="form-control" id="nivel" placeholder="Ingrese el nivel">
+                    </div>
+                    <input type="hidden" name="id-nivel" id="id-nivel">
+                    <div class="form-group">
+                      <label for="grado">Curso</label>
+                      <input type="text" class="form-control" id="grado" placeholder="Ingrese el grado de la materia">
+                    </div>
+                    <input type="hidden" name="id-grado" id="id-grado">
+                    <div class="form-group">
+                      <label for="intensidad">Intensidad Horaria</label>
+                      <input type="text" class="form-control" id="intensidad" placeholder="Ingrese la intensidad horaria" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="addSubject()">Agregar Materia</button>
+                  </form>
+            </div>
+          </div>
+        </div>
+    </div>   
+  </div>
+
+<!-- crear competencias -->
+  <div class="container mt-5" id="competencias" name="form2">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+             <p class="text-center text-uppercase fs-5 fw-bolder">Agregar Competencia</p> 
+            </div>
+            <div class="card-body">
+                <form id="addSkill">
+                    <div class="form-group" hidden>
+                      <label for="titulo-competencia">Competencia</label>
+                      <input type="text" class="form-control" id="titulo-competencia" placeholder="Ingrese el titulo de la competencia">
+                    </div>
+                    <!-- <div class="form-group">
+                      <label for="titulo">Titulo</label>
+                      <input type="text" class="form-control" id="titulo"  placeholder="C1" required>
+                    </div> -->
+                    <div class="form-group">
+                      <label for="titulo">Titulo</label>
+                      <select class="form-select" aria-label="Default select example" id="titulo" required>
+                        <option selected disabled value="0">Seleccione</option>
+                        <option value="C1">C1</option>
+                        <option value="C2">C2</option>
+                        <option value="C3">C3</option>
+                        <option value="C4">C4</option>
+                        <option value="C5">C5</option>
+                        <option value="C6">C6</option>
+                        <option value="E">E</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="materia">Materia</label>
+                      <input type="text" class="form-control" id="materia" disabled placeholder="Materia" required>
+                    </div>
+                    <input type="hidden" name="id-materia" id="id-materia">
+                    <div class="form-group">
+                      <label for="materia">Periodo</label>
+                      <select class="form-select" aria-label="Default select example" id="periodo" required>
+                        <option selected disabled value="0">Seleccione</option>
+                        <option value="1">Periodo I</option>
+                        <option value="2">Periodo II</option>
+                        <option value="3">Periodo III</option>
+                        <option value="4">Periodo IV</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="descripcion">Descripcion</label>
+                      <textarea class="form-control" placeholder="descripcion" id="descripcion"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="porcentaje">Porcentaje</label>
+                      <input type="number" class="form-control" id="porcentaje" placeholder="Ingrese el porcentaje" required max="100">
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="addSkill()">Agregar competencia</button>
+                  </form>
+            </div>
+          </div>
+        </div>
+    </div>   
+  </div>
+
+  <!-- agregar nota -->
+  <div class="container mt-5" id="notas" name="form3" >
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+             <p class="text-center text-uppercase fs-5 fw-bolder">Agregar nota</p> 
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                      <label for="studentName">Nombre estudiante</label>
+                      <input type="text" class="form-control" id="studentName" disabled placeholder="Materia" required>
+                    </div>
+                    <input type="hidden" name="skillId" id="skillId">
+                    <input type="hidden" name="studentId" id="studentId">
+                    <div class="form-group">
+                      <label for="type">Tipo Nota</label>
+                      <select class="form-select" aria-label="Default select example" id="type" required>
+                        <option  disabled value="0" hidden>Seleccione</option>
+                        <option value="1" hidden>Actitudinal</option>
+                        <option value="2" hidden>Procedimental</option>
+                        <option value="3" hidden>Cognitiva</option>
+                        <option value="4" hidden>Listening</option>
+                        <option value="5" hidden>Speaking</option>
+                        <option value="6" hidden>Reading</option>
+                        <option value="7" hidden>Writing</option>
+                        <option value="8" id="type8" selected>Final</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="rating">Nota</label>
+                      <input type="number" class="form-control" id="rating" placeholder="Ingrese la nota" required max="10">
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="addRating()">Agregar Nota</button>
+                  </form>
+            </div>
+          </div>
+        </div>
+    </div>   
+  </div>
+
+  <!-- editar notas -->
+  <div class="container mt-5" id="notasEdit" name="form4" >
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+             <p class="text-center text-uppercase fs-5 fw-bolder">Editar nota</p> 
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                      <label for="studentName">Nombre estudiante</label>
+                      <input type="text" class="form-control" id="studentNameEdit" disabled placeholder="Materia" required>
+                    </div>
+                    <input type="hidden" name="skillId" id="skillId">
+                    <input type="hidden" name="studentId" id="studentId">
+                    <div class="form-group">
+                      <label for="type">Tipo Nota</label>
+                      <select class="form-select" aria-label="Default select example" id="typeEdit" required>
+                        <option  disabled value="0" hidden>Seleccione</option>
+                        <option value="1" id="type1">Actitudinal</option>
+                        <option value="2" id="type2" hidden>Procedimental</option>
+                        <option value="3" id="type3" hidden>Cognitiva</option>
+                        <option value="4" id="type4" hidden>Listening</option>
+                        <option value="5" id="type5" hidden>Speaking</option>
+                        <option value="6" id="type6" hidden>Reading</option>
+                        <option value="7" id="type7" hidden>Writing</option>
+                        <option value="8" id="type8" selected>Final</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="rating">Nota</label>
+                      <input type="number" max="10" class="form-control" id="ratingEdit" placeholder="Ingrese la nota" required >
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="editRating()">Agregar Nota</button>
+                  </form>
+            </div>
+          </div>
+        </div>
+    </div>   
+  </div>
+
+  <!-- editar competencia -->
+  <div class="container mt-5" id="competenciasEdit" name="form2">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+             <p class="text-center text-uppercase fs-5 fw-bolder">Editar Competencia</p> 
+            </div>
+            <div class="card-body">
+                <form id="editSkill">
+                    <div class="form-group" hidden>
+                      <label for="titulo-competencia">Competencia</label>
+                      <input type="text" class="form-control" id="titulo-competencia" placeholder="Ingrese el titulo de la competencia">
+                    </div>
+                    <div class="form-group">
+                      <label for="titulo">Titulo</label>
+                      <select class="form-select" aria-label="Default select example" id="tituloEdit" required>
+                        <option selected disabled value="0">Seleccione</option>
+                        <option value="C1" id="C1">C1</option>
+                        <option value="C2" id="C2">C2</option>
+                        <option value="C3" id="C3">C3</option>
+                        <option value="C4" id="C4">C4</option>
+                        <option value="C5" id="C5">C5</option>
+                        <option value="C6" id="C6">C6</option>
+                        <option value="E" id="E">E</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="materia">Materia</label>
+                      <input type="text" class="form-control" id="materiaEdit" disabled placeholder="Materia" required>
+                    </div>
+                    <input type="hidden" name="id-materiaEdit" id="id-materiaEdit">
+                    <div class="form-group">
+                      <label for="materia">Periodo</label>
+                      <select class="form-select" aria-label="Default select example" id="periodoEdit" required>
+                        <option selected disabled value="0">Seleccione</option>
+                        <option value="1">Periodo I</option>
+                        <option value="2">Periodo II</option>
+                        <option value="3">Periodo III</option>
+                        <option value="4">Periodo IV</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="descripcion">Descripcion</label>
+                      <textarea class="form-control" placeholder="Leave a comment here" id="descripcionEdit"></textarea>
+                      <!-- <input type="text" class="form-control" id="descripcionEdit" placeholder="Descripcion de la competencia" required> -->
+                    </div>
+                    <div class="form-group">
+                      <label for="porcentaje">Porcentaje</label>
+                      <input type="number" class="form-control" id="porcentajeEdit" placeholder="Ingrese el porcentaje" required max="100">
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="editSkill()">Agregar competencia</button>
+                  </form>
+            </div>
+          </div>
+        </div>
+    </div>   
+  </div>
+
+  <!-- crear competencia a diferentes materias -->
+  <div class="container mt-5" id="competenciasMaterias" name="form2">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+             <p class="text-center text-uppercase fs-5 fw-bolder">Agregar Competencia</p> 
+            </div>
+            <div class="card-body">
+                <form id="addSkillMateria">
+                    <div class="form-group" hidden>
+                      <label for="titulo-competencia">Competencia</label>
+                      <input type="text" class="form-control" id="titulo-competencia" placeholder="Ingrese el titulo de la competencia">
+                    </div>
+                    <!-- <div class="form-group">
+                      <label for="titulo">Titulo</label>
+                      <input type="text" class="form-control" id="titulo"  placeholder="C1" required>
+                    </div> -->
+                    <div class="form-group">
+                      <label for="titulo">Titulo</label>
+                      <select class="form-select" aria-label="Default select example" id="tituloMaterias" required>
+                        <option selected disabled value="0">Seleccione</option>
+                        <option value="C1">C1</option>
+                        <option value="C2">C2</option>
+                        <option value="C3">C3</option>
+                        <option value="C4">C4</option>
+                        <option value="C5">C5</option>
+                        <option value="C6">C6</option>
+                        <option value="E">E</option>
+                      </select>
+                    </div>
+                    <input type="hidden" name="id-materia" id="id-materia">
+                    <div class="form-group">
+                      <label for="materia">Periodo</label>
+                      <select class="form-select" aria-label="Default select example" id="periodoMaterias" required>
+                        <option selected disabled value="0">Seleccione</option>
+                        <option value="1">Periodo I</option>
+                        <option value="2">Periodo II</option>
+                        <option value="3">Periodo III</option>
+                        <option value="4">Periodo IV</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="descripcion">Descripcion</label>
+                      <textarea class="form-control" placeholder="descripcion" id="descripcionMaterias"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="porcentaje">Porcentaje</label>
+                      <input type="number" class="form-control" id="porcentajeMaterias" placeholder="Ingrese el porcentaje" required max="100">
+                    </div>
+                    <div id="check"></div>
+                    <button type="submit" class="btn btn-primary" onclick="addSkillSubject()">Agregar competencia</button>
+                  </form>
+            </div>
+          </div>
+        </div>
+    </div>   
+  </div>
+
+    <script src="../scripts/forms.js"></script>
+</body>
+</html>

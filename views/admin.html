@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../paquetes/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <script src="../paquetes/bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+    <script src="../paquetes/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../paquetes/jQuery-3.7.0/jquery-3.7.0.min.js"></script> 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <script src="../paquetes/jquery-ui-1.13.2.custom/jquery-ui.min.js"></script>
+    <script src="../scripts/config.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+</head>
+<body>
+<section>
+    <table class="table table-dark">
+        <tr>
+            <td><select class="form-select col-2 ui-widget" aria-label="Default select example" id="gradeSelect">
+                <option selected>Grado</option>
+                </select>
+            </td>
+            <td>
+                <select class="form-select col-2"  id="students" aria-label="Default select example">
+                    <option value="">Estudiante</option>    
+                </select>
+            </td>
+            <td>
+                <select class="form-select col-2"  id="subjects" aria-label="Default select example">
+                    <option value="">Materia</option>    
+                </select>
+            </td>
+            <td>
+                <select class="form-select col-2" id="period" aria-label="Default select example">
+                    <option selected disabled value="">Periodo</option>
+                    <option value="1">I</option>
+                    <option value="2">II</option>
+                    <option value="3">III</option>
+                    <option value="4">IV</option>
+                </select>
+            </td>
+            <td>
+                <select class="form-select col-2" id="skills" aria-label="Default select example">
+                    <option selected disabled value="">Competencia</option>
+                </select>
+            </td>
+
+            <td>
+                <button type="submit" class="btn btn-primary" onclick="enviarDatos()"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
+            </td>
+        </tr>
+    </table>
+</section>
+   
+<section>
+    <table id="studentsTable" class="table table-striped-columns table-bordered" >
+        <thead>
+          <tr id="tableHead">
+            <th rowspan="2">Id</th>
+            <th rowspan="2">Nombre</th>
+            <th rowspan="2">Apellido</th>
+            <th rowspan="2">Materia</th>
+       
+            <th rowspan="2">E</th>
+            <th rowspan="2">R</th>
+            <th rowspan="2">F</th>
+          </tr>
+          <tr id="abilities">
+          </tr>
+        </thead>
+  
+        <tbody id="rating">
+         
+        </tbody>
+      </table>
+</section>
+
+<script src="../scripts/admin.js"></script>
+</body>
+</html>

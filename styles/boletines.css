@@ -1,0 +1,83 @@
+/* body {
+    font-family: Arial, sans-serif;
+  }
+   .report-card {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  } */
+  .report-card h1 {
+    text-align: center;
+  }
+  .report-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-spacing: 0;
+    border: 1px solid #ccc;
+  }
+  .report-card th,
+  .report-card td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  .report-card .subject-row {
+    background-color: #D8D8D8;
+  }
+  .report-card .subject-row td {
+    border-bottom: 1px solid #ccc;
+  }
+  .report-card .subject-row:not(:first-child) td {
+    border-top: 1px solid #ccc;
+  }
+  .report-card .skill-row td {
+      text-align: start;
+      border: 0;
+  }
+
+  .report-card .header-2 {
+      display: flexbox;
+      align-self: auto;
+  } */
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+ 
+  .reportcard h1 {
+    text-align: center;
+  }
+  .reportcard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-spacing: 0;
+    border: 1px solid #ccc;
+  }
+  .reportcard th,
+  .reportcard td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  .reportcard .subjectrow {
+    background-color: #D8D8D8;
+  }
+  .reportcard .subjectrow td {
+    border-bottom: 1px solid #ccc;
+  }
+  .reportcard .subjectrow:not(:first-child) td {
+    border-top: 1px solid #ccc;
+  }
+  .reportcard .skillrow td {
+      text-align: start;
+      border: 0;
+  }
+
+  .reportcard .header2 {
+      display: flexbox;
+      align-self: auto;
+  }

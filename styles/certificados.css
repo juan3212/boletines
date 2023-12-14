@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "Oswald";
+    src: url("../fonts/Oswald/Oswald-VariableFont_wght.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+body {
+    font-family: "Oswald";
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+  }
+  
+  header {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 0;
+  }
+
+  .gridCol {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    text-align: center;
+  }
+
+  .gridCol div {
+    border: 2px solid #000 ;
+    border-radius: 10px;
+  }
+
+  .studentNuip{
+    border: none !important;
+    margin-top: -5%;
+    margin-bottom: 0px;
+  }
+  
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  main {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th {
+    background-color: #ccc;
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+    width: 200px;
+  }
+
+
+
+  td {
+    border: none;
+    padding: 10px;
+    padding-bottom: 0;
+    padding-top: 5px;
+    text-align: left;
+  }
+
+  .empty {
+    width: 15px;
+  }
+
+  .nota {
+    background-color: #ccc;
+  }
+
+  .comment {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    padding-bottom: 5%;
+  }
+  
+
+  .firmas {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 20px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .img_firma{
+    width: 25%;
+    position: absolute;
+    margin-left: -12%;
+    margin-top: -10%;
+  }
+
+  .firma_mr {
+    margin-top: -5%;
+  }
+
+  .date {
+    /* width: 80%; */
+    text-align: end;
+    position: absolute;
+    margin-top: -3%;
+    right: 2%;
+  }
+ 

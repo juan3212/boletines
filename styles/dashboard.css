@@ -1,0 +1,41 @@
+.columna1{
+    position:absolute;
+    left: 0%;
+    height: 100dvh;
+}
+
+.columna2{
+    display: flexbox;
+    position: absolute;
+    left: 17%;
+    height: 100dvh;
+}
+
+.materias-card:hover {
+    background-color: snow;
+}
+
+a {
+  text-decoration: none;  
+}
+
+.list-group-item{
+    margin-bottom: 3%;
+}
+
+button {
+    margin-bottom: 4%;
+}
+
+.btn-success{
+    margin-bottom: 0%;
+}
+
+.form-select {
+    background-color: cornflowerblue;
+}
+
+.outRange{
+    font-weight: bold;
+    background-color: red !important;
+}

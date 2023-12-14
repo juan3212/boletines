@@ -1,0 +1,21 @@
+[
+    {
+        "nuip_estudiante": 1150184732,
+        "nombre_estudiante": "SOFIA",
+        "apellido_estudiante": "INFANTE SANDOVAL",
+        "nombre_grado": "DECIMO A",
+        "nombre_materia": "SYSTEMS AND DESIGN DECIMO A",
+        "id": 118
+    },
+    {
+        "materia_id": 126,
+        "nombre_materia": "SPANISH DECIMO A",
+        "nombre_grado": "DECIMO A",
+        "periodo_id": 2,
+        "nuip_estudiante": 1150184732,
+        "nombre_estudiante": "SOFIA",
+        "apellido_estudiante": "INFANTE SANDOVAL",
+        "tipo_nota_id": 8,
+        "AVG(n.nota)": 7.7
+      }
+]

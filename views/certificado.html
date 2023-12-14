@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificado</title>
+    <link rel="stylesheet" href="../styles/certificados.css">
+    <script src="../scripts/config.js"></script>
+
+    <script src="../paquetes/jQuery-3.7.0/jquery-3.7.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../paquetes/html2canvas/html2canvas.hertzen.com_dist_html2canvas.min.js"></script>
+</head>
+<body>
+    <div id="printArea">
+        <header>
+          <h1>CERTIFICADO DE NOTAS</br>AÑO <span id="year"></span></h1>
+          <div class="gridCol">
+            <div><h2 id="studentName">Nombre del estudiante</h2></div>
+            <div><h2 id="studentCourse">Grado</h2></div>
+            <div  class="studentNuip"><h2 id="studentNuip"></h2></div>
+        </div>
+        </header>
+
+        <main>  
+      
+        </main>
+
+        <footer>   
+          <div class="comment">
+            <h2 id="comment" ></h2>
+          </div>
+          <div class="firmas" id="firmas">
+            <div>
+              <img class="img_firma firma_teacher" src="../images/firma_teacher.png" alt="" srcset="">
+              <BR>LIZZETH HERNANDEZ DUQUE </br> PRINCIPAL</p></div>
+            <div>
+              <img class="img_firma firma_mr" src="../images/firma_mr.png" alt="" srcset="">
+              <P>JUAN CARLOS ACEVEDO <br> ACADEMIC SECRETARY</p>
+              </div>
+          </div>
+          <div class="date">
+            <p>Fecha de emisión: <span id="date"></span></p>
+          </div>
+        </footer>
+    </div>
+
+    <!-- <button id="print" onclick="printDoc()">Imprimir</button> -->
+
+    <script src="../scripts/certificado.js"></script>
+</body>
+</html>

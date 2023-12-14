@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel</title>
+
+    <link rel="stylesheet" href="../paquetes/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <script src="../paquetes/bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+    <script src="../paquetes/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <script src="../paquetes/jQuery-3.7.0/jquery-3.7.0.min.js"></script>
+
+</head>
+<body>
+    <!-- menu de navegacion -->
+    <nav class="navbar navbar-dark bg-dark ">
+        <a class="navbar-brand" href="./dashboard.html">
+          <img src="../images/icons/logo_sin_fondo.png" alt="Logo" width="80" height="60" class="d-inline-block align-center">
+          COLEGIO BILINGUE CEDAM
+        </a>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                <img src="../images/icons/user.jpg" width="40" height="40" alt="" srcset="">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><button class="dropdown-item" type="button" id="nombre-usuario">Nombre completo</button></li>
+              <li><button class="dropdown-item" type="button" >Configuracion</button></li>
+              <li><button class="dropdown-item" type="button" onclick="cerrarSesion()">Cerrar sesion</button></li>
+            </ul>
+          </div>    
+    </nav>
+
+      <div class="container">
+        <div class="row align-items-start">
+
+<!-- seccion lado izquierdo -->
+          <section class="col-2 border p-3 columna1">
+            One of three columns
+            
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input type="text" id="search-input-list" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nombre de la materia">
+            </div>
+
+            <div class="offset-1">
+              <button type="button" class="btn btn-primary" onclick="openForms(6)"><i class="fa-solid fa-plus"></i>Competencias</button>
+            </div>
+
+          
+
+          </section>
+
+<!-- seccion lado derecho -->
+          <section class="col-10 border p-3 columna2">
+            One of three columns
+  <!-- visualizacion de materias -->
+          <section>
+            <article id="materias">
+              <div class="container">
+                <div class="row">
+                  <div class="col-10">
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-magnifying-glass"></i></span>
+                      <input type="text" id="search-input-card" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Nombre de la materia">
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <button type="button" class="btn btn-primary" onclick="openForms(1)"><i class="fa-solid fa-plus"></i> Agregar materias</button>
+                  </div>
+                </div>
+              </div>
+<!-- ventana modal -->
+              <div class="modal" id="confirmModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Eliminar Materia</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p id="modalText">¿Estás seguro de que deseas eliminar esta materia?</p>
+                      <input type="hidden" name="" id="subjectId">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="minimize()">Cancelar</button>
+                      <button type="button" class="btn btn-danger" id="confirmDeleteBtn" onclick="delSubject()">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <!-- tarjetas de  materias -->
+              <div class="row row-cols-1 row-cols-md-3 g-4" id="materias-container"></div>
+            </article>
+
+            <article id="competencias">
+
+              <div class="container text-center">
+                <h1>Competencias</h1>
+              </div>
+
+              <div class="container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col" id="nombre-usuario" >Nombre profesor</th>
+                      <th scope="col" id="subject-name">Nombre materia</th>
+                      <th scope="col">
+                        <select class="form-select text-center" aria-label="Default select example" id="periodo">
+                        <option selected disabled>Selecciona Periodo</option>
+                        <option value="1"><p class="fw-bold">Periodo I</p></option>
+                        <option value="2"><p class="fw-bold">Periodo II</p></option>
+                        <option value="3"><p class="fw-bold">Periodo III</p></option>
+                        <option value="4"><p class="fw-bold">Periodo IV</p></option>
+                      </select></th>
+                      <th scope="col"><a href="" id="notasPeriodo"><button type="button" class="btn btn-success">Notas</button></a></th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+
+              <div class="col-2">
+                <button type="button" class="btn btn-primary" onclick="openForms(2)"><i class="fa-solid fa-plus"></i> Agregar competencias</button>
+              </div>
+
+              <div id="competencias-container"></div>
+
+            </article>
+
+
+          </section>
+        </div>
+      </div>
+
+
+  <script src="../scripts/dashboard.js"></script>
+ 
+</body>
+</html>
